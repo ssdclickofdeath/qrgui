@@ -2,6 +2,13 @@
 CHANGELOG
 =========
 
+VERSION 0.7
+===========
+May 19, 2014
+
+Exits properly when cancel button is pressed.
+Prints program name and status info in the terminal.
+
 VERSION 0.6
 ===========
 May 19, 2014
