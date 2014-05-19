@@ -11,6 +11,8 @@ BUTTON WORKING PROPERLY...
 USE AT YOUR OWN RISK.
 
 qrgui is an easy to use, GUI-based wrapper for qrencode, a QR code generator.
+qrgui is free software, released under the GNU General Public License (See the
+LICENSE file for more details.)
 
 What does that mean?
     You can generate QR codes without using the command line.
