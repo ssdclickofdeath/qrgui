@@ -32,7 +32,8 @@ Try installing it with your preferred package manager."
     exit 1;
 fi
 
-echo "qrgui 0.7"
+#Print name and copyright information.
+echo "qrgui 1.0"
 echo "Copyright (C) 2014 ssdclickofdeath"
 echo "This is free software; see README for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."

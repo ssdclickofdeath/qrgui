@@ -4,22 +4,22 @@ README
 
 ABOUT QRGUI
 ===========
-QRGUI IS CURRENTLY IN ALPHA. SOME FEATURES DO NOT WORK PROPERLY/HAVE NOT
-BEEN DEBUGGED, SUCH AS SAVING TO DIRECTORIES WITH SPACES IN THEIR NAMES, CANCEL
-BUTTON WORKING PROPERLY... 
-
-USE AT YOUR OWN RISK.
-
 qrgui is an easy to use, GUI-based wrapper for qrencode, a QR code generator.
-qrgui is free software, released under the GNU General Public License (See the
-LICENSE file for more details.)
 
 What does that mean?
     You can generate QR codes without using the command line.
 
-qrgui is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+qrgui is free software, released under the GNU General Public License (See the
+LICENSE file for more details.)
+
+Download the latest version at the GitHub repository:
+<https://github.com/ssdclickofdeath/qrgui>
+
+DISCLAIMER OF WARRANTY
+======================
+qrgui is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.
 
 DEPENDENCIES
 ============
@@ -33,4 +33,3 @@ AUTHOR
 ======
 
 Made by ssdclickofdeath <gramex [which is at] openmailbox.org>
-GitHub repository: <https://github.com/ssdclickofdeath/qrgui>
