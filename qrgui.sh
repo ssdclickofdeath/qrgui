@@ -56,7 +56,7 @@ FILENAME=$(zenity --file-selection \
 #[ `cat $TMP` = 1 ] && echo "Exiting qrgui..."; rm $TMP; exit 0;
 
 #Generates the QR code.
-qrencode -o '$FILENAME' "$QRSTRING" #$FILENAME in single quotes to allow spaces in directories
+qrencode -o "$FILENAME" "$QRSTRING"
 
 #Exits the shell script.
 #rm $TMP
