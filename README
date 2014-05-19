@@ -1,0 +1,34 @@
+======
+README
+======
+
+ABOUT QRGUI
+===========
+QRGUI IS CURRENTLY IN ALPHA. SOME FEATURES DO NOT WORK PROPERLY/HAVE NOT
+BEEN DEBUGGED, SUCH AS SAVING TO DIRECTORIES WITH SPACES IN THEIR NAMES, CANCEL
+BUTTON WORKING PROPERLY... 
+
+USE AT YOUR OWN RISK.
+
+qrgui is an easy to use, GUI-based wrapper for qrencode, a QR code generator.
+
+What does that mean?
+    You can generate QR codes without using the command line.
+
+qrgui is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+DEPENDENCIES
+============
+Both qrencode and zenity must be installed for this script to work.
+zenity is used to make the GUI dialog boxes, qrencode generates the QR code.
+
+To install the required dependencies with the apt-get package manager,
+run this command: sudo apt-get install qrencode zenity
+
+AUTHOR
+======
+
+Made by ssdclickofdeath <gramex [which is at] openmailbox.org>
+GitHub repository: <https://github.com/ssdclickofdeath/qrgui>
