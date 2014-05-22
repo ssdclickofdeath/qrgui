@@ -4,12 +4,12 @@ README
 
 ABOUT QRGUI
 ===========
-qrgui is an easy to use, GUI-based wrapper for qrencode, a QR code generator.
+Qrgui is a minimalistic GUI-based wrapper for qrencode, a command line based QR code generator.
 
 What does that mean?
     You can generate QR codes without using the command line.
 
-qrgui is free software, released under the GNU General Public License (See the
+Qrgui is free software, released under the GNU General Public License (See the
 LICENSE file for more details.)
 
 Download the latest version at the GitHub repository:
@@ -17,7 +17,7 @@ Download the latest version at the GitHub repository:
 
 DISCLAIMER OF WARRANTY
 ======================
-qrgui is distributed in the hope that it will be useful, but WITHOUT ANY
+Qrgui is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
 FOR A PARTICULAR PURPOSE.
 
