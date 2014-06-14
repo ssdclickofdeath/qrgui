@@ -2,6 +2,15 @@
 CHANGELOG
 =========
 
+VERSION 1.1
+===========
+June 14, 2014
+
+Added variables for the program name (easy to rebrand) and version number
+(closer to the top of the code.)
+Added a space saving function for the check if canceled code.
+Spelling correction.
+
 VERSION 1.0
 ===========
 May 19, 2014
@@ -36,3 +45,4 @@ VERSION 0.4 AND BELOW
 =====================
 
 Pieces of junk that didn't work/I can't remember what I changed.
+

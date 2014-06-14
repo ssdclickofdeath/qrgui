@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2014 ssdclickofdeath
+# Copyright (C) 2014 Joshua Wells
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,40 +15,56 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+#Setup
+
+#The icon that appears in the dialog boxes and the window selector.
 ICON=qricon.png
+
+#It's much easier to change the program version number when
+#it's closer to the top.
+VERSIONNUMBER="1.1"
+
+#Enter different text below and the whole program is rebranded.
+TITLE="Qrgui"
+
+function checkIfCanceled
+  {
+    #Checks if the window was closed/canceled by looking
+    #for exit code 1, if so, the program is closed.
+    if  [ $? = 1 ]
+      then
+        echo -e "\nExiting $TITLE..."; exit 1;
+    fi
+  }
 
 #Checks if qrencode is installed.
 qrencode -o /dev/null "Test"
 
 if  [ $? = 127 ]; then
-    echo -e "Qrencode (The QR code generator) is not installed.";
+    echo -e "The QR code generator, qrencode, is not installed.";
     zenity --info \
            --window-icon=$ICON \
-           --title="QR Encoder" \
+           --title="$TITLE" \
            --width=400 \
-           --text="The QR code generator (qrencode) is not installed. It must be installed for qrgui to work.
+           --text="The QR code generator, qrencode, is not installed. It must be installed for Qrgui to work.
 
 Try installing it with your preferred package manager."
     exit 1;
 fi
 
 #Print name and copyright information.
-echo "qrgui 1.0"
-echo "Copyright (C) 2014 ssdclickofdeath"
+echo "$TITLE $VERSIONNUMBER"
+echo "Copyright (C) 2014 Joshua Wells"
 echo "This is free software; see README for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
 
 QRSTRING=$(zenity --entry \
-                  --title="QR Encoder" \
+                  --title="$TITLE" \
                   --window-icon=$ICON \
                   --text="Enter text to encode into a QR code." \
                   --width=300)
 
-#Checks if window was closed/canceled by looking
-#for exit code 1, if so, the program is closed.
-if  [ $? = 1 ]; then
-    echo -e "\nExiting qrgui..."; exit 1;
-fi
+checkIfCanceled
 
 # Makes an empty variable to compare to QRSTRING to check for empty text entry.
 BLANK=""
@@ -58,35 +74,35 @@ BLANK=""
 if [ $QRSTRING = $BLANK ]; then
     zenity --error \
            --width=270 \
-           --title="QR Encoder" \
+           --title="$TITLE" \
            --window-icon=$ICON \
-     --text="The text entry field cannot be blank. QR Encoder will now close." \
+     --text="The text entry field cannot be blank. $TITLE will now close." \
            --timeout=4
-           echo -e "\nExiting qrgui..."
+           echo -e "\nExiting $TITLE..."
            exit 1;
 fi
 
 #Sets the variable FILENAME to the name and path to save the QR code.
 FILENAME=$(zenity --file-selection \
               --window-icon=$ICON \
-              --title="Save QR Code - QR Encoder" \
+              --title="Save QR Code - $TITLE" \
               --save \
               --confirm-overwrite)
 
-#Checks if window was closed/canceled by looking
-#for exit code 1, if so, the program is closed.
-if  [ $? = 1 ]; then
-    echo -e "\nExiting qrgui..."; exit 1;
-fi
+checkIfCanceled
 
 #Generates the QR code.
 qrencode -o "$FILENAME" "$QRSTRING"
 
 #Checks if QR code was generated successfully.
 if  [ $? = 0 ]; then
-    echo -e "\nQR code generated successfully"; exit 0;
-                else
-    echo -e "\nAn error occured."; exit 1;
+
+    echo -e "\nQR code generated successfully"
+    exit 0;
+
+  else
+
+    echo -e "\nAn error occurred."
+    exit 1;
 fi
 
-exit 0;
