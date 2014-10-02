@@ -2,6 +2,15 @@
 README
 ======
 
+Qrgui has moved--to Savannah!
+In the interest of using network services that are free as in freedom, meaning
+their source is available to its users under a freedom respecting license, I
+have decided to move all development to Savannah, the software forge run by the
+Free Software Foundation. (Savannah's source is, in fact, publicly available
+and under a free license.)
+
+Qrgui's new home: <https://savannah.nongnu.org/projects/qrgui>
+
 ABOUT QRGUI
 ===========
 Qrgui is a minimalistic GUI-based wrapper for qrencode, a command line based QR code generator.
@@ -12,14 +21,22 @@ What does that mean?
 Qrgui is free software, released under the GNU General Public License (See the
 LICENSE file for more details.)
 
-Download the latest version at the GitHub repository:
-<https://github.com/ssdclickofdeath/qrgui>
+License of this file (README)
+    Copyright (C) 2014 Joshua Wells
+
+    Copying and distribution of this file, with or without modification,
+    are permitted in any medium without royalty provided the copyright
+    notice, this notice and the section titled "DISCLAIMER OF WARRANTY"
+    are preserved.  This file is offered as-is, without any warranty.
 
 DISCLAIMER OF WARRANTY
 ======================
-Qrgui is distributed in the hope that it will be useful, but WITHOUT ANY
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
 FOR A PARTICULAR PURPOSE.
+
+(END DISCLAIMER OF WARRANTY SECTION)
+====================================
 
 DEPENDENCIES
 ============

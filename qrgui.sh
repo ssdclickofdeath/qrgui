@@ -37,6 +37,30 @@ function checkIfCanceled
     fi
   }
 
+#This is the outdated GitHub version, so notify the user on how to update.
+ABOUTSWITCH=`dirname $0`/aboutswitch.html
+
+SEEREADME=$(zenity --question \
+       --window-icon=$ICON \
+       --title="$TITLE" \
+       --width=400 \
+       --text="Development of Qrgui has moved to GNU Savannah. This is the final update that is distributed from GitHub.
+Would you like information on where to find newer versions?" \
+       --ok-label="Read More" \
+       --cancel-label="No") #, but thanks for asking.")
+
+if [ $? = 0 ]; then
+    zenity --text-info \
+           --window-icon=$ICON \
+           --title="$TITLE" \
+           --html \
+           --cancel-label="Quit" \
+           --width=500 \
+           --height=320 \
+           --filename="$ABOUTSWITCH"
+    checkIfCanceled
+fi
+
 #Checks if qrencode is installed.
 qrencode -o /dev/null "Test"
 
